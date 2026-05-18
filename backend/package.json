@@ -1,0 +1,44 @@
+{
+  "name": "mongo-evolution",
+  "version": "0.1.0",
+  "description": "CLI-first MongoDB schema evolution and migration safety toolkit.",
+  "type": "module",
+  "bin": {
+    "mongo-evolution": "./dist/cli/main.js"
+  },
+  "files": [
+    "dist",
+    "demo",
+    "migrations"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "dev": "tsx src/cli/main.ts",
+    "start": "node dist/cli/main.js",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "mongodb",
+    "migrations",
+    "schema-evolution",
+    "cli"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "commander": "^12.1.0",
+    "mongodb": "^6.20.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.19.23",
+    "mongodb-memory-server": "^11.1.0",
+    "tsx": "^4.20.6",
+    "typescript": "^5.9.3",
+    "vitest": "^2.1.9"
+  }
+}

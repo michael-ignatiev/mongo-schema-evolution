@@ -1,0 +1,6 @@
+node_modules/
+dist/
+coverage/
+.env
+.mongo-evolution.json
+.DS_Store
